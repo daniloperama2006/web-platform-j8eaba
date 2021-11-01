@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <title>Proyecto Investigación</title>
+     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+      html,
+body {
+    background-color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow-x: hidden !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+* {
+    text-decoration: none !important;
+}
+
+.img-diapo,
+video {
+    border-radius: 20px;
+    width: 650px;
+    height: 400px;
+}
+
+.nav {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+    background-color: #fff;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.nav .links a {
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.nav .links .mainlink {
+    color: #e0501b;
+}
+
+.nav h4 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+
+/* LANDING CSS */
+
+.landing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw 0 10vw;
+    height: 100vh;
+}
+
+.landingText h1 {
+    font-size: 6vw;
+    margin: 0 !important;
+}
+
+.landingText h3 {
+    margin: 20px !important;
+    font-size: 40px;
+    opacity: none;
+    line-height: 30px;
+}
+
+.landingText .btn {
+    width: 120px;
+    margin-top: 30px;
+    padding: 14px 20px 14px 20px;
+    background-color: #2f8be0;
+    border-radius: 45px;
+    text-align: center
+}
+
+.landingText .btn a {
+    font-size: 1.2vw;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #BD2222;
+}
+
+.landingImage img {
+    width: 28vw;
+}
+
+
+/* ABOUT CSS */
+
+.about {
+    height: 600px;
+    padding: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aboutText {
+    position: relative;
+    padding: 0 20px;
+    height: inherit;
+}
+
+.aboutText h1 {
+    position: relative;
+    left: 110px;
+    top: 80px;
+}
+
+.aboutText img {
+    width: 350px;
+    position: relative;
+    top: 100px;
+    left: 120px;
+}
+
+.aboutList {
+    width: 50%;
+    padding-top: 250px;
+}
+
+#video {
+    width: 100%;
+    height: 200%;
+}
+
+ol {
+    list-style: none;
+    color: #e0501b;
+}
+
+ol li {
+    font-size: 34px;
+    position: relative;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+li p {
+    font-size: 25px;
+    color: #000;
+    padding-left: 60px;
+    line-height: 30px;
+    opacity: 0.6;
+}
+
+li span {
+    position: absolute;
+    line-height: 25px;
+    font-weight: 600;
+}
+
+
+/* INFO_SECTION CSS */
+
+.infoSection {
+    height: 600px;
+    margin: 300px;
+}
+
+.infoHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.infoCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0 40px 0;
+}
+
+.infoCards .card {
+    position: relative;
+    height: 360px;
+    width: 350px;
+    background: #fff;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.09), 0 10px 10px rgba(0, 0, 0, 0.09)
+}
+
+.infoCards .one .cardoneImg {
+    width: 180px;
+    position: absolute;
+    top: -50px;
+    right: -50px;
+}
+
+.infoCards .two .cardtwoImg {
+    width: 158px;
+    position: absolute;
+    top: -50px;
+    right: -50px;
+}
+
+.infoCards .three .cardthreeImg {
+    width: 200px;
+    position: absolute;
+    top: -50px;
+    right: -50px;
+}
+
+.cardbgone {
+    height: 150px;
+    background-color: #ffce63;
+    text-align: center;
+}
+
+.imagenes-carta {
+    max-width: 70%;
+    padding-top: 10px;
+}
+
+.cardbgtwo {
+    height: 150px;
+    background-color: #a1cdff;
+    text-align: center;
+}
+
+.cardbgthree {
+    height: 150px;
+    background-color: #ffce63;
+    text-align: center;
+}
+
+.cardContent {
+    padding: 0 20px;
+}
+
+.cardContent h2 {
+    font-weight: 600;
+}
+
+.cardContent p {
+    line-height: 30px;
+    opacity: 0.6
+}
+
+.cardContent .cardBtn {
+    position: absolute;
+    right: 20px;
+    padding: 10px;
+    background-color: #ededed;
+    width: 25px;
+    height: 20px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.2s;
+}
+
+.cardContent .cardBtn:hover {
+    background-color: #2f8be0;
+}
+
+.cardContent .cardBtn .cardIcon {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 16px;
+}
+
+
+/* Banner */
+
+.banner {
+    height: 400px;
+    background-color: #ffce63;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bannerText h1 {
+    font-size: 3vw;
+    color: #000;
+    font-weight: 600;
+}
+
+.bannerText img {
+    width: 10vw;
+    margin-right: 20px;
+}
+
+.bannerImg img {
+    width: 20vw;
+}
+
+
+/* FOOTER CSS */
+
+.footer {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer p {
+    font-size: 40px;
+}
+
+.footerlinks a {
+    margin: 40px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #000;
+}
+
+.footerlinks .mainlink {
+    color: #e0501b;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 20px;
+        height: auto;
+        overflow-y: hidden;
+    }
+    .nav h4 {
+        font-size: 6vw;
+        margin-top: 10px;
+        margin-bottom: 14px;
+    }
+    .nav .links a {
+        margin-right: 25px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    /* LANDING PAGE */
+    .landing {
+        flex-direction: column-reverse;
+        height: 750px;
+        align-items: center;
+        justify-content: center;
+        text-align: center
+    }
+    .landingText h1 {
+        font-size: 6vw;
+        margin: 0 !important;
+    }
+    .landingText h3 {
+        font-size: 16px;
+    }
+    .landingText .btn {
+        margin: 0 auto;
+    }
+    .landingText .btn a {
+        font-size: 3vw;
+    }
+    .landingImage img {
+        width: 52vw;
+        margin-bottom: 20px;
+    }
+    /* ABOUT */
+    .about {
+        height: auto;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .aboutText {
+        padding: 0 50px;
+        height: 100px;
+    }
+    .aboutText h1 {
+        left: 40px;
+        font-size: 5vw;
+    }
+    .aboutText img {
+        width: 16vw;
+        top: 10px;
+        left: -30px;
+    }
+    .aboutList {
+        width: 75%;
+    }
+    ol li {
+        font-size: 26px;
+    }
+    li p {
+        font-size: 14px;
+    }
+    .infoSection {
+        height: auto;
+        max-height: 1000px;
+    }
+    .infoHeader {
+        text-align: center;
+        margin: 40px 0;
+    }
+    .infoCards {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        justify-content: center;
+        align-items: center;
+        text-align: center
+    }
+    .infoCards .card {
+        margin-bottom: 60px;
+    }
+    .banner {
+        height: auto;
+        flex-direction: column-reverse;
+        padding: 50px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .banner h1 {
+        font-size: 6vw;
+    }
+    .bannerInnerText {
+        font-size: 3vw !important;
+    }
+    .bannerText img {
+        width: 20vw;
+    }
+    .bannerImg img {
+        width: 26vw;
+    }
+    .footer {
+        padding-bottom: 40px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="nav">
+            <div class="logo">
+                <h4>Proyecto de investigación</h4>
+            </div>
+            <div class="links">
+                <a href="#" class="mainlink">¿Qué es software?
+                   
+                </a>
+                <a href="#">Ayuda</a>
+                <a href="#">Acerca de</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+
+        <!-- LANDING PAGE -->
+
+        <div class="landing">
+            <div class="landingText" data-aos="fade-up" data-aos-duration="1000">
+                <h1><span style="color:#CD553B;">Contexto actual<span style="color:black;"> del software en Colombia</span> </h1>
+                <h3 style="color:black;">Y su aporte al crecimiento económico y tecnológico del país</h3>
+                <div class="btn">
+                    <a href="#">Empecemos</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ABOUT SECTION -->
+
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1>INTRODUCCIÓN <br> <span style="color:#2f8be0;font-size:3vw">¿QUÉ ES EL SOFTWARE?</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <li>
+                        <img class="img-diapo" src="img/dia2-1.jpg">
+                        <p>Es un conjunto de reglas e instrucciones informáticas que nos permiten darle órdenes a una computadora.
+                        </p>
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1>LES PROPONGO <br> <span style="color:#2f8be0;font-size:3vw">UN PEQUEÑO VÍDEO</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <li>
+                        <video id="video" src="img/dia3-video.mp4" controls></video>
+                        <p>Este vídeo te ayudará a entender mejor los conceptos
+                        </p>
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1>PRESENTACIÓN <br> <span style="color:#2f8be0;font-size:3vw">PROBLEMA</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <li>
+                        <img class="img-diapo" src="img/dia4-1.jpg">
+                        <p>- Uso e importancia del software en la vida cotidiana</p>
+                        <p>- Déficit de programadores en Colombia</p>
+                        <p>- Demanda de programadores ¿Cómo la enfrenta el país?
+                        </p>
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1><br> <span style="color:#2f8be0;font-size:3vw">JUSTIFICACIÓN</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <li>
+                        <img class="img-diapo" src="img/dia5-1.jpg">
+                        <p>— Observar la situación del software en Colombia</p>
+                        <p>— Analizar cifras y estrategias sobre el tema</p>
+                        <p>— Determinar beneficios sobre el aumento de programadores en Colombia.</p>
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1><br> <span style="color:#2f8be0;font-size:3vw">OBJETIVOS</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <h1><br> <span style="color:black;font-size:2vw">Objetivo general</span> </h1>
+
+                    <li>
+                        <p> Identificar el contexto actual del software en Colombia para analizar cifras y estrategias que permitan determinar los posibles beneficios que traería para el país que existieran más personas trabajando en el área de la “Programación
+                            y el software”.</p>
+                    </li>
+                </ol>
+
+                <ol>
+                    <h1><br> <span style="color:black;font-size:2vw">Objetivos específicos</span> </h1>
+
+                    <li>
+                        <p>a). Determinar contextos y emprendimientos del software en Colombia, junto a cifras de oferta y demanda de programadores</p>
+                        <p>b). Identificar los beneficios de la formación en el campo de desarrollo de software y su importancia en el crecimiento económico y tecnológico de Colombia. </p>
+                        <p>c). Analizar las estrategias propuestas en Colombia para capacitar e impulsar a más personas a trabajar en el área del software y la programación</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1>ENFOQUE<br> <span style="color:#2f8be0;font-size:3vw">INVESTIGATIVO</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <li>
+                        <img class="img-diapo" src="img/dia7-1.jpg">
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1>ALCANCE<br> <span style="color:#2f8be0;font-size:3vw">DE LA INVESTIGACIÓN</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <li>
+                        <img class="img-diapo" src="img/dia8-1.jpg">
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1><br> <span style="color:#2f8be0;font-size:3vw">ANTECEDENTES</span> </h1>
+                <img class="img-diapo" src="img/dia9-1.jpg">
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <h1><br> <span style="color:black;font-size:2vw">Capacidades de innovación</span> </h1>
+
+                    <li>
+                        <p> Martínez Marín, S. J. (2012). Análisis en la Industria del Software en Colombia: Una Mirada a la Inversión en Capacidades de Innovación. https://www.researchgate.net/. .</p>
+                    </li>
+                </ol>
+
+                <ol>
+                    <h1><br> <span style="color:black;font-size:2vw">Análisis prospectivo de la industria del Software</span> </h1>
+
+                    <li>
+                        <p> ·Piña Taborda, J., Castaño Ospina, D. M., Hernández Díaz, L. E., & Garro Torres, J. D. (2020). Análisis prospectivo de la industria de desarrollo de software en Colombia. Punto De Vista, 11(16). https://doi.org/10.15765/pdv.v11i16.1415
+                        </p>
+
+                    </li>
+                </ol>
+                <ol>
+                    <h1><br> <span style="color:black;font-size:2vw">Estudio del comportamiento de la industria del software en Colombia</span> </h1>
+
+                    <li>
+                        <p> ·Palomino Zuluaga, K. C. (2011). Estudio del comportamiento de la industria del software en Colombia ante escenarios de capacidades de innovación y ventajas comparativas por medio de dinámica de sistemas. https://repositorio.unal.edu.co/bitstream/handle/unal/8729/200802180-2011.pdf?sequence=1&isAllowed=y.
+                            https://repositorio.unal.edu.co/handle/unal/8729
+
+                        </p>
+
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1><br> <span style="color:#2f8be0;font-size:3vw">CONCEPTOS</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <h1><br> <span style="color:black;font-size:2vw"></span> </h1>
+
+                    <li>
+                        <p>- Software</p>
+                        <p>- Capacidades de Innovación</p>
+                        <p>- Computación</p>
+                        <p>- Programador de software</p>
+                        <p>- Programación</p>
+                        <p>- Demanda</p>
+                        <p>- Déficit</p>
+                        <p>- Ingeniería de software</p>
+                        <p>- Necesidad laboral</p>
+                        <p>- Profesional</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1>PROBLEMÁTICAS DEL SOFTWARE<br> <span style="color:#2f8be0;font-size:3vw">EN COLOMBIA</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <li>
+                        <img class="img-diapo" src="img/dia11-1.jpg">
+                        <p>Fortalezas y debilidades
+                        </p>
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1>IMPORTANCIA DE FOMENTAR LA<br> <span style="color:#2f8be0;font-size:3vw">PROGRAMACIÓN</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <li>
+                        <img class="img-diapo" src="img/dia12-1.png">
+                        <p>— Nivel educativo</p>
+                        <p>— Proyecto de vida</p>
+                        <p>— Desarrollo</p>
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1>IMPORTANCIA DE FOMENTAR LA<br> <span style="color:#2f8be0;font-size:3vw">PROGRAMACIÓN</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <li>
+                        <img class="img-diapo" src="img/dia13-1.png">
+                        <p>— Organismos investigativos</p>
+                        <p>— Documentos y proyectos</p>
+                        <p>— Internet</p>
+                        <p>— Noticias, artículos y cifras</p>
+                        <p>— Información brindada por instituciones</p>
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1>ROL DEL<br> <span style="color:#2f8be0;font-size:3vw">PROGRAMADOR</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <li>
+                        <img class="img-diapo" src="img/dia14-1.jpg">
+                        <p>Según el DANE, los desarrolladores de software investigan, analizan y evalúan los requisitos de las aplicaciones de programas informáticos y sistemas operativos existentes o nuevos y diseñan, desarrollan, prueban y mantienen soluciones
+                            de software que satisfacen estos requerimientos </p>
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1>IMPULSO DEL CAMPO DESDE<br> <span style="color:#2f8be0;font-size:3vw">EL MINTIC</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <li>
+                        <img class="img-diapo" src="img/dia15-1.jpg">
+                        <p>- Transformación digital y productividad del país</p>
+                        <p>- Premios ingenio </p>
+                        <p>- Becas </p>
+                        <p>- Misión MinTic 2022</p>
+                        <p>- Alianzas de formación</p>
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1>EMPRENDIMIENTO COLOMBIANO EN<br> <span style="color:#2f8be0;font-size:3vw">PROGRAMACIÓN</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <li>
+                        <img class="img-diapo" src="img/dia16-1.png">
+                        <p>— Porcentaje representativo</p>
+                        <p>— Incremento </p>
+                        <p>— Empresas </p>
+                        <p>— Valor de la industria</p>
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1>DEMANDA ACTUAL DE<br> <span style="color:#2f8be0;font-size:3vw">PROGRAMADORES</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <li>
+                        <img class="img-diapo" src="img/dia17-1.jpg">
+                        <p>“Existen miles de programadores autodidactas, que se forman en ‘bootcamps’ o en línea. Sin embargo, a diferencia, las compañías tecnológicas y startups que se están inclinando a calificar el mejor talento por sus habilidades y
+                            no por sus títulos universitarios” (Forbes, 2020)
+                        </p>
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+        <div class="about">
+            <div class="aboutText" data-aos="fade-up" data-aos-duration="1000">
+                <h1>BENEFICIOS DEL SOFTWARE<br> <span style="color:#2f8be0;font-size:3vw">PARA COLOMBIA</span> </h1>
+            </div>
+            <div class="aboutList" data-aos="fade-left" data-aos-duration="1000">
+                <ol>
+                    <li>
+                        <img class="img-diapo" src="img/dia18-2.jpg">
+                        <p>“Existen miles de programadores autodidactas, que se forman en ‘bootcamps’ o en línea. Sin embargo, a diferencia, las compañías tecnológicas y startups que se están inclinando a calificar el mejor talento por sus habilidades y
+                            no por sus títulos universitarios” (Forbes, 2020)
+                        </p>
+                    </li>
+
+
+                </ol>
+            </div>
+        </div>
+        <!-- INFO SECTION -->
+
+        <div class="infoSection">
+            <div class="infoHeader" data-aos="fade-up" data-aos-duration="1000">
+                <h1>ESTRATEGIAS PARA MÁS CAPACITACIÓN <br> <span style="color:#e0501b">EN EL DESARROLLO DE SOFTWARE</span> </h1>
+            </div>
+            <div class="infoCards">
+                <div class="card one" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="cardbgone">
+                        <img class="imagenes-carta" src="img/dia19-1.jpg" alt="">
+                    </div>
+                    <div class="cardContent">
+                        <h2>Misión MinTic 2022</h2>
+                        <p>Busca formar a 100.000 programadores gratuitamente entre 2020 y 2022</p>
+
+                    </div>
+                </div>
+                <div class="card two" data-aos="fade-up" data-aos-duration="1300">
+                    <div class="cardbgtwo">
+                        <img class="imagenes-carta" src="img/dia19-2.jpg" alt="">
+                    </div>
+                    <div class="cardContent">
+                        <h2>Alianzas educativas</h2>
+                        <p>Convenios de capacitación en programación a través de empresas educacionales.</p>
+
+                    </div>
+
+                </div>
+                <div class="card three" data-aos="fade-up" data-aos-duration="1600">
+                    <div class="cardbgthree">
+                        <img class="imagenes-carta" src="img/dia19-3.jpg" alt="">
+                    </div>
+                    <div class="cardContent">
+                        <h2>Programas de educación superior</h2>
+                        <p>Ingeniería de software en universidades del país, que forman y enseñan programación</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- BANNER AND FOOTER -->
+
+        <div class="banner">
+            <div class="bannerText" data-aos="fade-right" data-aos-duration="1000">
+                <h1>CONCLUSIONES <br> <span style="font-size:1.6vw;font-weight:normal" class="bannerInnerText">
+                    
+                </span> </h1>
+                <a href="#">
+
+                </a>
+
+            </div>
+            <div class="bannerImg" data-aos="fade-up" data-aos-duration="1000">
+                <img style="border-radius:20px;width:550px;height:400px;" src="img/dia20-1.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Gracias por su atención</p>
+            <div class="footerlinks">
+                <a href="#" class="mainlink">Software</a>
+                <a href="#">Investigación</a>
+                <a href="#">1001</a>
+                <a href="#">Tecnología</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+   
+</body>
+
+</html>
